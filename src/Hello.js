@@ -5,7 +5,7 @@ import icon from './icon.png'
 export default function Hello () {
   return (
     <h1 className={css.tomato}>
-      Hello
+      Hello!!
       <img src={icon} />
     </h1>
   );
