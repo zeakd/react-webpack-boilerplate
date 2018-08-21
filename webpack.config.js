@@ -12,6 +12,30 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          },
+        ]
+      },
+      {
+        test: /\.png$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: 'static/[name].[ext]',
+            limit: 1000,
+          }
+        }
       }
     ]
   },
